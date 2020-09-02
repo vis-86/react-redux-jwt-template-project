@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import { LoginPage, DashboardPage, ProfilePage} from './pages';
-import AlertMessage from './_components/AlertMessage';
 import { connect } from 'react-redux';
 import { alertActions } from "./_actions";
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { AlertMessage, Navbar } from './_components';
 
 function App({loggingIn, message, clearAlert}) {
   console.log("VIS:loggingIn:", loggingIn);
@@ -13,7 +13,9 @@ function App({loggingIn, message, clearAlert}) {
       <BrowserRouter>
         {loggingIn
           ?
-          (<Switch>
+          (
+          <Switch>
+            <Navbar>
             <Route path="/dashboard">
               <DashboardPage></DashboardPage>
             </Route>
@@ -21,6 +23,7 @@ function App({loggingIn, message, clearAlert}) {
               <ProfilePage></ProfilePage>
             </Route>
             <Redirect to="/dashboard" />
+            </Navbar>
           </Switch>)
           :
           (<Switch>

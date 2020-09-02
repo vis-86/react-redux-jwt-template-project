@@ -14,4 +14,4 @@ Modal.propTypes = {
 
 }
 
-export default Modal;
+export { Modal};

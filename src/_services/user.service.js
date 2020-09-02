@@ -13,7 +13,7 @@ function login(email, password) {
         body: JSON.stringify({ email, password })
     };
 
-    return fetch(`api/users/login`, requestOptions)
+    return mockFetch(`api/users/login`, requestOptions)
         .then(handleResponse)
         .then(user => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -60,7 +60,7 @@ async function mockFetch(url) {
     switch (url) {
         case "api/users/login":
             return new Promise(resolve => {
-                resolve({ ok: true, text: () => new Promise(res2 => res2(JSON.stringify({ login: 'name', token: 'test' }))) })
+                resolve({ ok: true, text: () => new Promise(res2 => res2(JSON.stringify({ login: 'name', token: 'user-token' }))) })
             })
         default:
             return new Error("No mock for " + url)

@@ -8,4 +8,4 @@ const AlertMessage = props => {
   </div>);
 }
 
-export default AlertMessage;
+export {AlertMessage};
