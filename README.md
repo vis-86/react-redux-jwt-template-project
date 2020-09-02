@@ -1,3 +1,9 @@
+It is simple project on react, redux, react-router, jwt auth, styled by bootstrap.css. 
+
+Have 3 pages: LoginPage, DashboardPage and ProfilePage
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
