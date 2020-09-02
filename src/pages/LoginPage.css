@@ -1,0 +1,16 @@
+.login-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+}
+.login-form { 
+    width: 400px;
+    padding: 3rem;
+    border-radius: 25px;
+    color: #000;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
