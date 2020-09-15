@@ -22,8 +22,8 @@ export const LoginPage = (props) => {
         <div className="login-content">
             <Formik
                 initialValues={{
-                    email: 'as2@mai.com',
-                    password: '123123',
+                    email: '',
+                    password: '',
                 }}
                 validationSchema={LoginSchema}
                 onSubmit={values => {
@@ -32,7 +32,7 @@ export const LoginPage = (props) => {
             >
                 {({ errors, touched }) => (
                     <Form className="form login-form">
-                        <h3 className="mb-5 text-white text-center">Авторизация</h3>
+                        <h3 className="mb-5 text-white text-center">Auth</h3>
                         <div className="form-group">
                             <Field id="email" name="email" placeholder="Email" type="email" className="form-control" />
                             {errors.email && touched.email ? <ErrorMessage css="text-center">{errors.email}</ErrorMessage> : null}
